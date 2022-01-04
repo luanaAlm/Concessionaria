@@ -18,7 +18,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <a class="navbar-brand img-fluid" href="#"><img src="{% static 'image/logo.png' %}" alt=""></a>
+                    <a class="navbar-brand img-fluid" href="{% url 'index' %}">
+                        <img src="{% static 'image/logo.png' %}" alt="logomarca" loading="lazy">
+                    </a>
                 </div>
                 <div class="col-sm-2 topbar-item">
                     <a class="button btn btn-telefone" href="">
@@ -50,6 +52,39 @@
         
     </div>
     <!-- ======= Fim Top Bar ======= -->
+    <!-- Inicio Nav -->
+    <nav class="navbar navbar-expand-lg fixed">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active btn-efect" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn-efect" aria-current="page" href="#">Destaques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn-efect" aria-current="page" href="#">Seminovos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn-efect" aria-current="page" href="#">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn-efect" aria-current="page" href="#">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav-link active btn-efect" aria-current="page" href="#contact">Contato</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- Fim Nav -->
+    
     {% block main %}
     {% endblock main %}
     <!-- Jquery -->
