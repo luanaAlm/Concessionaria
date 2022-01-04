@@ -3,4 +3,5 @@ from .models import *
 
 
 def index(request):
-    return render(request, 'index.html')
+    banners = Banner.objects.all()
+    return render(request, 'index.html', {"banners": banners})

@@ -13,6 +13,15 @@ class Cliente(models.Model):
         return template.format(self)
 
 
+class Banner(models.Model):
+    banner = models.URLField(max_length=400)
+    titulo = models.CharField(max_length=40)
+
+    def __str__(self):
+        template = '{0.titulo}'
+        return template.format(self)
+
+
 class Carros(models.Model):
     TIPO_CHOICE = (
         ('Novos', 'Novos'),
