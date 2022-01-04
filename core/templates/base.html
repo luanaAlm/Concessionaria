@@ -8,10 +8,52 @@
     <title>Document</title>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-        
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
 </head>
 <body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+        <div class="container d-flex">
+        <div class="contact-info mr-auto">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            (86) 9 8889 0278
+        </div>
+        <div class="social-links">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <a href="https://api.whatsapp.com/send?phone=+5586988890278&text=Gostaria de um orçamento!" class="twitter">
+            Whatsapp
+            </a>
+        </div>
+        </div>
+    </div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+        <a href=""></a>
+        <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">Quem somos</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contatos</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
     {% block main %}
     {% endblock main %}
+    <!-- Jquery -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- popper -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
 </body>
 </html>
