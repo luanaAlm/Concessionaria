@@ -13,7 +13,16 @@ class Cliente(models.Model):
         return template.format(self)
 
 
-class Banner(models.Model):
+class Banner1(models.Model):
+    banner = models.URLField(max_length=400)
+    titulo = models.CharField(max_length=40)
+
+    def __str__(self):
+        template = '{0.titulo}'
+        return template.format(self)
+
+
+class Banner2(models.Model):
     banner = models.URLField(max_length=400)
     titulo = models.CharField(max_length=40)
 
