@@ -62,21 +62,23 @@
                     <h2>Destaques</h2>
                 </div>
             </div>
-            <div class="col-10 owl-carousel destaques-carousel">
+            <div class="col-8 owl-carousel destaques-carousel">
                 {% for i in destaques %}
-                    <div class="destaques-item">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
+                <div class="destaque-item" data-aos="fade-up">
+                    <div class="card box-shadow">
+                        <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
+                        <div class="card-body">
+                            <p>{{i.marca}} {{i.Modelo}}</p>
+                            <h3>RS {{i.valor}}</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a class="btn" href="">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>  
+                                    Saiba Mais
+                                </a>
+                            </div>
                         </div>
-                        <p>{{i.marca}} {{i.Modelo}}</p>
-                        <h3>RS {{i.valor}}</h3>
-                        
-                            <a class="button btn" href="">
-                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                                Saiba Mais
-                            </a>
-                        
                     </div>
+                </div>
                 {% endfor %}
             </div>
         </div>

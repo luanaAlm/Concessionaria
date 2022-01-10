@@ -216,70 +216,20 @@ ul {
 /*-------------------------------------------------- */
 /* Destaques
 -------------------------------------------------- */
-.destaques-item {
-  /* margin: 5px;
-  padding: 5px; */
-  /* box-shadow: var(--shadow-black-100); */
-  /* border-radius: 10px; */
-  text-align: center;
-}
-.destaques-item .img-box {
-  height: auto;
-  width: 80%;
-  display: inline-block;
-  /* margin-bottom: 50px; */
-}
-.destaques-item img {
-  /* border-radius: 50%; */
-  width: 100%;
-  padding: 10px;
-  object-fit: cover;
-}
-.destaques-item p {
-  font-size: 18px;
-  margin: 0 0 20px;
-  color: var(--block-900);
-  line-height: 26px;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-.destaques-item h3 {
-  font-size: 24px;
-  color: var(--block-900);
-  font-weight: 500px;
-  margin: 0 0 5px;
-  text-transform: capitalize;
-  padding-bottom: 5px;
-}
-.destaques-item .btn {
-  background-color: var(--main-color);
-  font-size: 16px;
-  text-transform: capitalize;
-  transition: all 0.5s ease;
-  font-weight: 400;
-  color: var(--block-000);
-  padding: 5px 8px;
-}
-.destaques-item .btn:hover {
-  color: #ffffff;
-  background-color: var(--main-color);
-}
-/* .destaques img {
-  max-width: 100%;
-  object-fit: scale-down;
-} */
-
-/* .destaques-item .destaques-img-box {
-  
-} */
-/* .destaques {
+.destaques {
   background-color: var(--block-100);
-} */
+}
+.destaque-item {
+  padding: 10px;
+}
 .card {
   border: none;
   border-radius: none;
   box-shadow: var(--shadow-black-100);
   border-width: 15px;
+}
+.card img {
+  object-fit: cover !important;
 }
 .card-body h3 {
   font-weight: 600;
@@ -295,17 +245,18 @@ ul {
   /* margin: 0 0 30px; */
   line-height: 26px;
 }
-/* .texto {
-  position: absolute;
-  background-color: var(--color-2);
-  color: #fff;
-  text-align: center;
-  top: 10px;
-  width: 150px;
-  line-height: 30px;
-  height: 30px;
-} */
-
+.card-body .btn {
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  font-weight: 500;
+  color: var(--bg-dark);
+  padding: 8px 8px;
+}
+.card-body .btn:hover {
+  color: var(--main-color);
+  /* background-color: var(--color-3); */
+}
 /*--------------------------------------------------------------
 # Responsividade
 --------------------------------------------------------------*/
