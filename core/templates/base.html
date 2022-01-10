@@ -16,89 +16,92 @@
 </head>
 <body>
     <!-- ======= Inicio Top Bar ======= -->
-    <div class="topbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <a class="navbar-brand img-fluid" href="{% url 'index' %}">
-                        <img src="{% static 'image/logo.png' %}" alt="logomarca" loading="lazy">
-                    </a>
-                </div>
-                <div class="col-sm-2 topbar-item">
-                    <a class="button btn btn-telefone" href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        Telefone
-                    </a>
-                </div>
-                <div class="col-sm-2 topbar-item">
-                    <a class="button btn btn-whats">
-                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                        WhatsApp
-                    </a>
-                </div>
-                <div class="col-sm-2 topbar-item" >
-                    <div class="btn-group" role="group" aria-label="Third group">
-                        <button type="button" class="rounded btn btn-secondary">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </button>
+    <div class="fixed-top">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <a class="navbar-brand img-fluid" href="{% url 'index' %}">
+                            <img src="{% static 'image/logo.png' %}" alt="logomarca" loading="lazy">
+                        </a>
                     </div>
-                    <div class="btn-group" role="group" aria-label="Third group">
-                        <button type="button" class="rounded btn btn-secondary">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </button>
+                    <div class="col-sm-2 topbar-item">
+                        <a class="button btn btn-telefone" href="">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            Telefone
+                        </a>
                     </div>
+                    <div class="col-sm-2 topbar-item">
+                        <a class="button btn btn-whats">
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                    <div class="col-sm-2 topbar-item" >
+                        <div class="btn-group" role="group" aria-label="Third group">
+                            <button type="button" class="rounded btn btn-secondary">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="btn-group" role="group" aria-label="Third group">
+                            <button type="button" class="rounded btn btn-secondary">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
                 </div>
-                
             </div>
+            
         </div>
-        
+        <!-- ======= Fim Top Bar ======= -->
+        <!-- Inicio Nav -->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active btn-efect" aria-current="page" href="#myCarousel">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn-efect" aria-current="page" href="#destaques">Destaques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn-efect" aria-current="page" href="#">Seminovos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn-efect" aria-current="page" href="#">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active btn-efect" aria-current="page" href="#">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" nav-link active btn-efect" aria-current="page" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <!-- Fim Nav -->
     </div>
-    <!-- ======= Fim Top Bar ======= -->
-    <!-- Inicio Nav -->
-    <nav class="navbar navbar-expand-lg fixed">
-        <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <i class="fas fa-bars"></i>
-        </button>
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active btn-efect" aria-current="page" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active btn-efect" aria-current="page" href="#">Destaques</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active btn-efect" aria-current="page" href="#">Seminovos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active btn-efect" aria-current="page" href="#">Sobre nós</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active btn-efect" aria-current="page" href="#">Clientes</a>
-                </li>
-                <li class="nav-item">
-                    <a class=" nav-link active btn-efect" aria-current="page" href="#contact">Contato</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
-    <!-- Fim Nav -->
-    
     {% block main %}
     {% endblock main %}
     <!-- Jquery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <!-- popper -->
     <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- main -->
+    <script src="{% static 'js/main.js' %}"></script>
     <!-- bootstrap -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/d8695f59a3.js" crossorigin="anonymous"></script>
     <!-- owl carousel js -->
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-        
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d8695f59a3.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>

@@ -32,11 +32,14 @@ class Banner2(models.Model):
 
 
 class Carros(models.Model):
-    TIPO_CHOICE = (
-        ('Novos', 'Novos'),
+    CATERGORIA_CARRO_CHOICE = (
+        ('Destaques', 'Destaques'),
         ('Seminovos', 'Seminovos'),
     )
     ID_Carro = models.AutoField(primary_key=True)
+    categoria = models.CharField(
+        max_length=100, choices=CATERGORIA_CARRO_CHOICE)
+
     # imagens
     imagem1 = models.URLField(max_length=300)
     imagem2 = models.URLField(max_length=300)

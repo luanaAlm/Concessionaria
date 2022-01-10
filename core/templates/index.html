@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block main %}
+<!-- Inicio Carousel -->
+<div class="section-padding-carousel"></div>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -50,4 +52,35 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+<!-- Fim Carousel -->
+<!-- Inicio Destaques -->
+<section class="destaques section-padding d-flex align-items-center" id="destaques">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Destaques</h2>
+                </div>
+            </div>
+            <div class="col-10 owl-carousel destaques-carousel">
+                {% for i in destaques %}
+                    <div class="destaques-item">
+                        <div class="img-box">
+                            <img class="img-fluid" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
+                        </div>
+                        <p>{{i.marca}} {{i.Modelo}}</p>
+                        <h3>RS {{i.valor}}</h3>
+                        
+                            <a class="button btn" href="">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                Saiba Mais
+                            </a>
+                        
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fim Destaques -->
 {% endblock main %}
