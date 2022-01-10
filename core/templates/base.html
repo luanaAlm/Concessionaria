@@ -12,7 +12,9 @@
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <!--owl Carrosel css-->
     <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
-    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
 </head>
 <body>
     <!-- ======= Inicio Top Bar ======= -->
@@ -71,7 +73,7 @@
                         <a class="nav-link active btn-efect" aria-current="page" href="#destaques">Destaques</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active btn-efect" aria-current="page" href="#">Seminovos</a>
+                        <a class="nav-link active btn-efect" aria-current="page" href="#seminovos">Seminovos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active btn-efect" aria-current="page" href="#">Sobre nós</a>
@@ -90,6 +92,7 @@
     </div>
     {% block main %}
     {% endblock main %}
+    <footer class="section-padding"></footer>
     <!-- Jquery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <!-- popper -->
@@ -102,6 +105,13 @@
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/d8695f59a3.js" crossorigin="anonymous"></script>
-    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 1000,
+        });
+    </script>
 </body>
 </html>

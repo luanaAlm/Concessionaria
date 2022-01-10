@@ -216,9 +216,6 @@ ul {
 /*-------------------------------------------------- */
 /* Destaques
 -------------------------------------------------- */
-.destaques {
-  background-color: var(--block-100);
-}
 .destaque-item {
   padding: 10px;
 }
@@ -256,6 +253,12 @@ ul {
 .card-body .btn:hover {
   color: var(--main-color);
   /* background-color: var(--color-3); */
+}
+/*--------------------------------------------------------------
+# seminovos
+--------------------------------------------------------------*/
+.seminovos {
+  background-color: var(--block-100);
 }
 /*--------------------------------------------------------------
 # Responsividade
