@@ -71,7 +71,7 @@
                             <p>{{i.marca}} {{i.Modelo}}</p>
                             <h3>RS {{i.valor}}</h3>
                             <div class="d-flex justify-content-between align-items-center">
-                                <a class="btn" href="">
+                                <a class="btn" href="{% url 'viewCarros' i.ID_Carro %}">
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i>  
                                     Saiba Mais
                                 </a>
@@ -105,7 +105,7 @@
                             <p>{{i.marca}} {{i.Modelo}}</p>
                             <h3>RS {{i.valor}}</h3>
                             <div class="d-flex justify-content-between align-items-center">
-                                <a class="btn" href="">
+                                <a class="btn" href="{% url 'viewCarros' i.ID_Carro %}">
                                     <i class="fa fa-arrow-right" aria-hidden="true"></i>  
                                     Saiba Mais
                                 </a>
