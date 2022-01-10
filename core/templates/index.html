@@ -95,6 +95,27 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center">
+            {% for i in seminovos %} 
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="destaque-item" data-aos="fade-up">
+                    <div class="card box-shadow">
+                        <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
+                        <div class="card-body">
+                            <p>{{i.marca}} {{i.Modelo}}</p>
+                            <h3>RS {{i.valor}}</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a class="btn" href="">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>  
+                                    Saiba Mais
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 <!-- Fim Seminovos -->
