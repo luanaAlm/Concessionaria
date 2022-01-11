@@ -3,8 +3,8 @@
 
 {% block main %}
 <!-- Inicio Carousel -->
-<div class="section-padding-carousel"></div>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div class="section-padding-carousel" id="myCarousel"></div>
+<div  class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -97,19 +97,17 @@
         </div>
         <div class="row justify-content-center">
             {% for i in seminovos %} 
-            <div class="col-md-3" data-aos="fade-up">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" data-aos="fade-up">
                 <div class="destaque-item" data-aos="fade-up">
                     <div class="card box-shadow">
                         <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
                         <div class="card-body">
                             <p>{{i.marca}} {{i.Modelo}}</p>
                             <h3>RS {{i.valor}}</h3>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a class="btn" href="{% url 'viewCarros' i.ID_Carro %}">
-                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>  
+                                <a type="button" class="btn btn-warning btn-lg btn-block" href="{% url 'viewCarros' i.ID_Carro %}">
                                     Saiba Mais
                                 </a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

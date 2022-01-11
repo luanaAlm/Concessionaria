@@ -64,10 +64,10 @@ ul {
   }
 }
 .section-padding {
-  padding: 80px 0;
+  padding: 150px 0;
 }
 .section-title {
-  margin-bottom: 60px;
+  margin-bottom: 15px;
 }
 .section-title h2 {
   font-size: 35px;
@@ -84,17 +84,16 @@ ul {
   background-color: var(--bg-dark);
 }
 .topbar img {
-  padding-top: 17px;
-  padding-bottom: 18px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   width: 50px;
 }
 .topbar .topbar-item {
   padding-top: 20px;
   padding-bottom: 10px;
-  /* align-items: center; */
   text-align: center;
 }
-.topbar .btn-telefone {
+/* .topbar .btn-telefone {
   background-color: var(--color-2);
   font-size: 18px;
   text-transform: capitalize;
@@ -122,35 +121,35 @@ ul {
 }
 .topbar .btn-group {
   padding-left: 5px;
-}
+} */
 /*--------------------------------------------------------------
 # Nav
 --------------------------------------------------------------*/
 .navbar {
   background-color: var(--block-100);
-  padding: 30px 0;
+  padding: 15px 0;
   transition: all 0.5s ease;
 }
 .navbar.navbar-shrink {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   background-color: var(--main-color);
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .navbar .navbar-brand {
-  font-size: 30px;
+  font-size: 24px;
   color: var(--main-color);
   font-weight: 500;
   text-transform: capitalize;
 }
 .navbar .nav-item {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .navbar .nav-item .nav-link {
   color: var(--main-color);
   font-size: 18px;
   text-transform: capitalize;
   font-weight: 700;
-  padding: 8px 0;
+  padding: 5px 0;
   position: relative;
 }
 .navbar .nav-item .nav-link::before {
@@ -171,7 +170,7 @@ ul {
 /* CUSTOMIZE THE CAROUSEL- HOME
 -------------------------------------------------- */
 .section-padding-carousel {
-  padding: 75px 0;
+  padding: 70px 0;
 }
 .carousel-caption {
   bottom: 20rem;
@@ -252,17 +251,6 @@ ul {
   background-color: var(--block-100);
   align-items: center;
   text-align: center;
-}
-.seminovos .btn {
-  text-align: center;
-  align-items: center;
-  background-color: var(--color-2);
-  font-size: 16px;
-  text-transform: capitalize;
-  transition: all 0.5s ease;
-  font-weight: 500;
-  color: var(--bg-dark);
-  padding: 8px 15px;
 }
 /*--------------------------------------------------------------
 # Responsividade
