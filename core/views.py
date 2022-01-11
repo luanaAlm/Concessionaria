@@ -8,11 +8,14 @@ def index(request):
     bannersSecundarios = Banner2.objects.all()
     destaques = Carros.objects.filter(categoria="Destaques")
     seminovos = Carros.objects.filter(categoria="Seminovos")
+    depoimentos = Depoimento.objects.all()
+
     return render(request, 'index.html', {
         "bannerPrincipal": bannerPrincipal,
         "bannersSecundarios": bannersSecundarios,
         "destaques": destaques,
         "seminovos": seminovos,
+        "depoimentos": depoimentos,
     })
 
 

@@ -97,7 +97,7 @@
         </div>
         <div class="row justify-content-center">
             {% for i in seminovos %} 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" data-aos="fade-up">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3" data-aos="fade-up">
                 <div class="destaque-item" data-aos="fade-up">
                     <div class="card box-shadow">
                         <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
@@ -149,4 +149,38 @@
     </div>
 </section>
 <!-- Fim Sobre nós -->
+<!-- Inicio Depoimento -->
+<section class="depoimentos section-padding d-flex align-items-center" id="clientes">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>O que o nossos clientes dizem</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel depoimentos-carousel">
+                {% for i in depoimentos %}
+                    <div class="depoimentos-item" data-aos="zoom-in">
+                        <div class="img-box">
+                            <img src="{{i.imageDep}}" alt="{{i.nome}}" loading="lazy">
+                        </div>
+                        <p>{{i.comentario}}</p>
+                        <h3>{{i.nome}}</h3>
+                        <span></span>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Fim Depoimento -->
 {% endblock main %} 
