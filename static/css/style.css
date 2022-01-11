@@ -250,8 +250,20 @@ ul {
 --------------------------------------------------------------*/
 .seminovos {
   background-color: var(--block-100);
+  align-items: center;
+  text-align: center;
 }
-
+.seminovos .btn {
+  text-align: center;
+  align-items: center;
+  background-color: var(--color-2);
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  font-weight: 500;
+  color: var(--bg-dark);
+  padding: 8px 15px;
+}
 /*--------------------------------------------------------------
 # Responsividade
 --------------------------------------------------------------*/
