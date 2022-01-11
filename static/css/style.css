@@ -70,6 +70,7 @@ ul {
   margin-bottom: 15px;
 }
 .section-title h2 {
+  padding-top: 70px;
   font-size: 26px;
   color: var(--main-color);
   font-weight: 700;
@@ -297,6 +298,100 @@ ul {
   display: inline-block;
   font-size: 16px;
   color: var(--color-2);
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact-info {
+  background: var(--main-color);
+}
+.contact-info h3 {
+  font-size: 20px;
+  color: var(--block-900);
+  font-weight: 500;
+  margin: 0 0 40px;
+}
+.contact-info-item {
+  padding: 15px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.contact-info-item i {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: var(--main-color);
+  border: 1px solid --main-color;
+  text-align: center;
+  line-height: 38px;
+  left: 0;
+  top: 0;
+}
+.contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: var(--block-900);
+}
+.contact-info-item p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 26px;
+  color: var(--block-400);
+}
+.contact-form .form-group {
+  margin-bottom: 25px;
+}
+.contact-form .control-label {
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 26px;
+  color: var(--block-400);
+}
+.contact-form #id_nome,
+#id_email,
+#id_telefone {
+  height: 52px;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-black-100);
+  border-radius: 15px;
+  padding: 0 24px;
+  color: var(--block-900);
+  background-color: var(--block-000);
+  transition: all 0.5s ease;
+}
+.contact-form #id_mensagem {
+  padding-top: 12px !important;
+  height: 140px;
+  resize: none;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-black-100);
+  border-radius: 15px;
+  padding: 0 24px;
+  color: var(--block-900);
+  background-color: var(--block-000);
+  transition: all 0.5s ease;
+}
+.contact-form #id_nome:focus,
+#id_email:focus,
+#id_telefone:focus,
+#id_mensagem:focus {
+  border-color: var(--main-color);
+}
+.mapa {
+  padding-top: 30px;
+}
+.mapa h3 {
+  font-size: 24px;
+  color: var(--block-900);
+  font-weight: 500;
+  margin: 0 0 40px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------

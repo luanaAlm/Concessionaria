@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .models import *
-from core.form import CarroForm
+from core.form import CarroForm, ClienteForm
 
 
 def index(request):
@@ -10,13 +10,28 @@ def index(request):
     seminovos = Carros.objects.filter(categoria="Seminovos")
     depoimentos = Depoimento.objects.all()
 
+    form = ClienteForm()
+
     return render(request, 'index.html', {
         "bannerPrincipal": bannerPrincipal,
         "bannersSecundarios": bannersSecundarios,
         "destaques": destaques,
         "seminovos": seminovos,
         "depoimentos": depoimentos,
+        "form": form
     })
+
+
+def cliente_novo(request):
+    form = ClienteForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        # messages.success(request, 'Sua mensagem foi enviada com sucesso!')
+        return redirect('index')
+    else:
+        # messages.error(
+        #     request, 'Houve um erro, reenvie novamente a mensagem!')
+        return redirect('index')
 
 
 def viewCarros(request, ID_Carro):
