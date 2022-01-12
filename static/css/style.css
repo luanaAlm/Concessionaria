@@ -302,8 +302,8 @@ ul {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact-info {
-  background: var(--main-color);
+.contato-form-item {
+  background-color: #1e3259 !important;
 }
 .contact-info h3 {
   font-size: 20px;
@@ -356,18 +356,18 @@ ul {
 .contact-form #id_nome,
 #id_email,
 #id_telefone {
-  height: 52px;
+  height: 40px;
   border: 1px solid transparent;
   box-shadow: var(--shadow-black-100);
   border-radius: 15px;
-  padding: 0 24px;
+  padding: 0 15px;
   color: var(--block-900);
   background-color: var(--block-000);
   transition: all 0.5s ease;
 }
 .contact-form #id_mensagem {
   padding-top: 12px !important;
-  height: 140px;
+  height: 100px;
   resize: none;
   border: 1px solid transparent;
   box-shadow: var(--shadow-black-100);

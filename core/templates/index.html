@@ -194,13 +194,38 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="contact-info-item">
+                    <i class="bi bi-telephone"></i>
+                    <h4>Número de telefone</h4>
+                    <p>(99) 9 9999 9999</p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="contact-info-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <h4>Localização</h4>
+                    <p>1914 translation by H. Rackham.</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="contact-info-item">
+                    <i class="bi bi-envelope-fill"></i>
+                    <h4>Endereço de Email</h4>
+                    <p>help@lipsum.com</p>
+                </div>
+            </div>
+        </div>
         
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-7">
+            <div class="col-lg-6 col-md-6">
                 <div class="contact-form">
                     <form action="{% url 'cliente_novo' %}" method="POST">
                         <div class="row">
                             <div class="col-lg-12">
+                                <h4>Duvidas e Informações</h4>
                                 <div class="form-group">
                                     <!--Seguranca-->
                                     {% csrf_token %}
@@ -217,40 +242,12 @@
                     </form> 
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-4">
-                <div class="contact-info-item">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <h4>Localização</h4>
-                    <p>1914 translation by H. Rackham.</p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="contact-info-item">
-                    <i class="bi bi-envelope-fill"></i>
-                    <h4>Endereço de Email</h4>
-                    <p>help@lipsum.com</p>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="contact-info-item">
-                    <i class="bi bi-telephone"></i>
-                    <h4>Número de telefone</h4>
-                    <p>(99) 9 9999 9999</p>
-                </div>
-            </div>
-        </div>
-        <div class="mapa">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                        <h3>Onde estamos</h3>
-                    </div>
-                </div>
-            </div>
+            <div class="col-lg-6 col-md-6">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15896.146174103107!2d-42.79551755!3d-5.09779395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1640185785225!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
         </div>
+        
     </div>
 </section>
 <!-- Fim Contact -->
