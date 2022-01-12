@@ -393,6 +393,107 @@ ul {
   margin: 0 0 40px;
   text-align: center;
 }
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  background: #8e2de2; /* fallback for old browsers */
+  background: var(--main-color);
+  padding: 50px 0;
+}
+.footer-col h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 25px;
+  text-transform: capitalize;
+}
+.footer-col p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0;
+}
+.footer-col ul {
+  margin: 0;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  display: block;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.footer-col ul li i {
+  width: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #ffffff;
+  border: 1px solid --main-color;
+  text-align: center;
+  /* line-height: 38px; */
+  left: 0;
+  top: 0;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  display: block;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.footer-col ul li a:hover {
+  padding-left: 5px;
+}
+.footer .copyright {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  color: var(--block-000);
+  font-weight: 300;
+}
+.footer .copyright a {
+  color: var(--block-000) !important;
+}
+.footer-col .fa-home {
+  text-align: center;
+  font-size: 32px;
+  color: var(--block-000);
+}
+/*--------------------------------------------------------------
+# WhatsApp
+--------------------------------------------------------------*/
+.button-whasapp {
+  background-color: var(--main-color);
+}
+.button-whasapp i {
+  right: 25px;
+  position: fixed;
+  padding-top: 5px;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  background-color: var(--color-3);
+  color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: var(--shadow-black-300);
+  z-index: 100;
+  margin-top: 16px;
+}
+.button-whasapp .my-float {
+  margin-top: 16px;
+  color: #ffffff;
+}
 
 /*--------------------------------------------------------------
 # Responsividade
