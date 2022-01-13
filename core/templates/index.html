@@ -69,10 +69,11 @@
                     <div class="card box-shadow">
                         <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
                         <div class="card-body">
-                            <p>{{i.marca}} {{i.Modelo}}</p>
-                            <h3>RS {{i.valor}}</h3>
+                            <h3>{{i.marca}} {{i.Modelo}}</h3>
+                            <h3>Ano {{i.AnoInicial}}/{{i.AnoFinal}}</h3>
+                            <h4>RS {{i.valor}}</h4>
                             <div class="align-items-center">
-                                <a class="btn" href="{% url 'viewCarros' i.ID_Carro %}">
+                                <a class="btn btn-lg btn-block" href="{% url 'viewCarros' i.ID_Carro %}">
                                     <i class="bi bi-arrow-right-short"></i>
                                     Saiba Mais
                                 </a>
@@ -103,12 +104,16 @@
                     <div class="card box-shadow">
                         <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
                         <div class="card-body">
-                            <p class="card-text"><b>{{i.marca}} {{i.Modelo}}</b></p>
-                            <ul class="list-group list-group-flush">
-                                <!-- <li class="list-group-item">{{i.combustivel}}</li> -->
-                                <li class="list-group-item">Ano {{i.AnoInicial}}/{{i.AnoFinal}}</li>
-                            </ul>
-                            <h3>RS {{i.valor}}</h3>
+                            <h3>{{i.marca}} {{i.Modelo}}</h3>
+                            <h4>Ano {{i.AnoInicial}}/{{i.AnoFinal}}</h4>
+                            <hr>
+                            <p> Câmbio: <span>{{i.combustivel}}</span></p>
+                            <p> Portas: <span>{{i.porta}}</span></p>
+                            <p> Quilometragem: <span>{{i.km}} KM</span></p>
+                            <p> Combustivel: <span>{{i.combustivel}} KM</span></p>
+                            <hr>
+                            <h3>POR APENAS</h3>
+                            <h1>RS {{i.valor}}</h1>
                             <br>
                             <a type="button" class="btn btn-warning btn-lg btn-block" href="{% url 'viewCarros' i.ID_Carro %}">
                                 <i class="bi bi-arrow-right-short"></i>

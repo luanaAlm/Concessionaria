@@ -71,7 +71,8 @@ ul {
 }
 .section-title h2 {
   padding-top: 70px;
-  font-size: 26px;
+  font-size: 36px;
+  line-height: 48px;
   color: var(--main-color);
   font-weight: 700;
   text-transform: uppercase;
@@ -111,20 +112,21 @@ ul {
   padding: 5px 0;
 }
 .navbar .navbar-brand {
-  font-size: 24px;
+  font-size: 14px;
+  line-height: 18px;
   color: var(--main-color);
-  font-weight: 500;
+  font-weight: 700;
   text-transform: capitalize;
 }
 .navbar .nav-item {
   margin-left: 20px;
 }
 .navbar .nav-item .nav-link {
+  font-size: 14px;
+  line-height: 18px;
   color: var(--main-color);
-  font-size: 18px;
-  text-transform: capitalize;
   font-weight: 700;
-  padding: 5px 0;
+  text-transform: capitalize;
   position: relative;
 }
 .navbar .nav-item .nav-link::before {
@@ -196,25 +198,41 @@ ul {
 .card img {
   object-fit: cover !important;
 }
+.card-body {
+  align-items: center;
+}
 .card-body h3 {
-  font-weight: 600;
-  color: var(--block-400);
-  font-size: 24px;
-  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--bg-dark);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 .card-body h4 {
-  font-weight: 600;
-  color: var(--main-color);
-  font-size: 24px;
-  line-height: 26px;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  color: var(--block-400);
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: capitalize;
 }
 .card-body .btn {
-  font-size: 16px;
-  text-transform: capitalize;
+  font-size: 12px;
+  text-transform: uppercase;
   transition: all 0.5s ease;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 18px;
   color: var(--bg-dark);
   padding: 8px 8px;
+}
+.card-body .btn i {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--bg-dark);
+  /* padding: 8px 8px; */
 }
 .card-body .btn:hover {
   color: var(--main-color);
@@ -226,6 +244,50 @@ ul {
   background-color: var(--block-100);
   align-items: center;
   text-align: center;
+}
+.seminovos p {
+  margin-bottom: 0rem;
+  /* align-items: center; */
+  text-align: left;
+  font-weight: 700;
+  color: var(--main-color);
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: capitalize;
+}
+.seminovos span {
+  align-items: center;
+  font-weight: 400;
+  color: var(--block-900);
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.seminovos h3 {
+  margin-bottom: 0rem;
+  align-items: center;
+  font-weight: 700;
+  color: var(--block-400);
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.seminovos h1 {
+  margin-bottom: 0rem;
+  align-items: center;
+  font-weight: 700;
+  color: var(--bg-dark);
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+.seminovos .btn {
+  align-items: center;
+  font-weight: 700;
+  color: var(--bg-dark);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 /*--------------------------------------------------------------
 # Sobre Nós
