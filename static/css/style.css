@@ -517,11 +517,11 @@ ul {
 }
 
 .carro .box span {
+  text-transform: none;
   font-size: 14px;
   line-height: 21px;
   color: var(--block-900);
   font-weight: 700px;
-  text-transform: capitalize;
   font-weight: bold;
 }
 
@@ -609,7 +609,14 @@ ul {
   background-color: var(--block-100);
   padding-bottom: 50px;
 }
-
+.aviso p {
+  padding-top: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 18px;
+  color: var(--block-400);
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
