@@ -57,6 +57,8 @@ class Carros(models.Model):
     combustivel = models.CharField(max_length=100)
     km = models.DecimalField(max_digits=19, decimal_places=3)
     obsAdicionais = models.TextField()
+    finalPlaca = models.IntegerField()
+    cor = models.CharField(max_length=100)
     valor = models.DecimalField(max_digits=19, decimal_places=2)
 
     def __str__(self):
