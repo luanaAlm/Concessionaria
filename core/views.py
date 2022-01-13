@@ -22,6 +22,16 @@ def index(request):
     })
 
 
+def viewCarros(request, ID_Carro):
+    data = {}
+    carros = Carros.objects.get(ID_Carro=ID_Carro)
+    form = CarroForm(request.POST or None, instance=carros)
+    form = ClienteForm()
+    data["carros"] = carros
+    data["form"] = form
+    return render(request, "carro.html", data, {"form": form, })
+
+
 def cliente_novo(request):
     form = ClienteForm(request.POST or None)
     if form.is_valid():
@@ -34,10 +44,13 @@ def cliente_novo(request):
         return redirect('index')
 
 
-def viewCarros(request, ID_Carro):
-    data = {}
-    carros = Carros.objects.get(ID_Carro=ID_Carro)
-    form = CarroForm(request.POST or None, instance=carros)
-    data["carros"] = carros
-    data["form"] = form
-    return render(request, "carro.html", data)
+def cliente_novo_carro(request):
+    form = ClienteForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        # messages.success(request, 'Sua mensagem foi enviada com sucesso!')
+        return redirect('carro')
+    else:
+        # messages.error(
+        #     request, 'Houve um erro, reenvie novamente a mensagem!')
+        return redirect('carro')

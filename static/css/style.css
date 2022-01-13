@@ -472,6 +472,144 @@ ul {
   text-align: center;
 }
 /*--------------------------------------------------------------
+# Carro
+--------------------------------------------------------------*/
+.carro {
+  background-color: var(--block-100);
+}
+.carro img {
+  /* width: 100%; */
+  /* height: 22rem; */
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.carro-title h2 {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--main-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0;
+}
+.informacoes h3 {
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--block-900);
+  font-weight: 700px;
+  text-transform: uppercase;
+}
+.carro .box {
+  background-color: var(--block-000);
+  padding: 30px;
+  box-shadow: var(--shadow-black-100);
+}
+.carro .box h4 {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--block-400);
+  font-weight: 400px;
+  text-transform: uppercase;
+}
+
+.carro .box span {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--block-900);
+  font-weight: 700px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.carro .carro-item h2 {
+  text-align: right;
+  font-size: 36px;
+  line-height: 54px;
+  color: var(--block-900);
+  font-weight: 700px;
+  text-transform: capitalize;
+}
+.carro-item .form-item {
+  text-align: center;
+  padding: 30px;
+  color: var(--block-000);
+  background-color: var(--main-color);
+}
+.carro-item .form-item h4 {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--block-000);
+  font-weight: 700px;
+  text-transform: capitalize;
+}
+.carro-item .form-item p {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--block-000);
+  font-weight: 400px;
+}
+.carro-item .form-group {
+  background-color: var(--block-900);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.carro-item .contact-form {
+  padding-top: 0rem;
+}
+.carro-item .contact-form .form-group {
+  margin-bottom: 20px;
+}
+.carro-item .contact-form .control-label {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 20px;
+  color: var(--block-000);
+}
+.carro-item .contact-form #id_nome,
+#id_email,
+#id_telefone {
+  height: 40px;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-black-100);
+  border-radius: 15px;
+  padding: 0 15px;
+  color: var(--block-900);
+  background-color: var(--block-000);
+  transition: all 0.5s ease;
+}
+.carro-item .contact-form #id_mensagem {
+  padding-top: 12px !important;
+  height: 100px;
+  resize: none;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-black-100);
+  border-radius: 15px;
+  padding: 0 24px;
+  color: var(--block-900);
+  background-color: var(--block-000);
+  transition: all 0.5s ease;
+}
+.carro-item .contact-form #id_nome:focus,
+#id_email:focus,
+#id_telefone:focus,
+#id_mensagem:focus {
+  border-color: var(--main-color);
+}
+.contato-carro {
+  background-color: var(--block-100);
+  padding-bottom: 50px;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {

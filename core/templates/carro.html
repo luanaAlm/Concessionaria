@@ -1,2 +1,316 @@
 {% load static %}
-teste
+{% load bootstrap %} 
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Concerssionária</title>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <!-- Bootstrap CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <!--owl Carrosel css-->
+        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <!--owl magnific-popup css-->
+        <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+        
+    </head>
+    <body>
+        <!-- ======= Inicio Top Bar ======= -->
+        <div class="fixed-top">
+            <div class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3 col-sm-3 col-md-4 col-lg-6 col-xl-6">
+                            <a class="navbar-brand img-fluid" href="{% url 'index' %}">
+                                <img src="{% static 'image/logo.png' %}" alt="logomarca" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="col-2 col-sm-3 col-md-3 col-lg-2 col-xl-2 topbar-item">
+                            <a type="button" class="btn btn-warning" href="">
+                                <i class="bi bi-telephone"></i>
+                                Telefone
+                            </a>
+                        </div>
+                        <div class="col-2 col-sm-3 col-md-3 col-lg-2 col-xl-2 topbar-item">
+                            <a type="button" class="btn btn-success">
+                                <i class="bi bi-whatsapp"></i>
+                                WhatsApp
+                            </a>
+                        </div>
+                        <div class="col-5 col-sm-3 col-md-2 col-lg-2 col-xl-2 topbar-item" >
+                            <div class="btn-group" role="group" aria-label="Third group">
+                                <button type="button" class="rounded-circle btn btn-secondary">
+                                    <i class="bi bi-instagram"></i>
+                                </button>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Third group">
+                                <button type="button" class="rounded-circle btn btn-secondary">
+                                    <i class="bi bi-facebook"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- ======= Fim Top Bar ======= -->
+            <!-- Inicio Nav -->
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active btn-efect" aria-current="page" href="#myCarousel">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active btn-efect" aria-current="page" href="#destaques">Destaques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active btn-efect" aria-current="page" href="#seminovos">Seminovos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active btn-efect" aria-current="page" href="#sobreNos">Sobre nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active btn-efect" aria-current="page" href="#clientes">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" nav-link active btn-efect" aria-current="page" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            <!-- Fim Nav -->
+        </div>
+        {% block main %}
+        <!-- Inicio Carro -->
+        <section class="carro section-padding d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="carro-title">
+                            <h2>{{carros.marca}} {{carros.Modelo}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-8">
+                        <div class="owl-carousel carros-carousel parent-container">
+                            <a class="image-link" href="{{carros.imagem1}}">
+                                <img src="{{carros.imagem1}}" class="img-fluid" alt="{{ carros.marca }}" loading="lazy">
+                            </a>
+                            <a class="image-link" href="{{carros.imagem2}}">
+                                <img src="{{carros.imagem2}}" class="img-fluid" alt="{{ carros.marca }}" loading="lazy">
+                            
+                            </a>
+                            <a class="image-link" href="{{carros.imagem3}}">
+                                <img src="{{carros.imagem3}}" class="img-fluid" alt="{{ carros.marca }}" loading="lazy">
+                            </a>
+                            <a class="image-link" href="{{carros.imagem4}}">
+                                <img src="{{carros.imagem4}}" class="img-fluid" alt="{{ carros.marca }}" loading="lazy">        
+                            </a>
+                        </div>
+                        <div class="informacoes">
+                            <h3>Informações Técnicas</h3>
+                            <div class="box row">
+                                <div class="col-lg-6">
+                                    <h4>Marca: <span>{{carros.marca}}</span></h4>
+                                    <h4>Ano: <span>{{carros.AnoInicial}}/{{carros.AnoFinal}}</span></h4>
+                                    <h4>Câmbio: <span>{{carros.cambio}}</span></h4>
+                                    <h4>Combustivel: <span>{{carros.combustivel}}</span></h4>
+                                    <h4>Quilometragem: <span>{{carros.km}} KM</span></h4>
+                                    <h4>Informações Adicionais: <span>{{carros.obsAdicionais}}</span></h4>
+                                    
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4>Modelo: <span>{{carros.Modelo}}</span></h4>
+                                    <h4>Versão: <span>{{carros.versao}}</span></h4>
+                                    <h4>Portas: <span>{{carros.porta}}</span></h4>
+                                    <h4>Final da Placa: <span>{{carros.finalPlaca}}</span></h4>
+                                    <h4>Cor: <span>{{carros.cor}}</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carro-item col-lg-4 col-md-4">
+                        <div class="contact-form">
+                            <form action="{% url 'cliente_novo_carro' %}" method="POST">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div>
+                                            <h2>R$ {{carros.valor}}</h2>
+                                        </div>
+                                        <div class="form-item">
+                                            <h4>Estou interessado</h4>
+                                            <p>Preencha o formulário abaixo para receber o contato de um de nossos especialistas:</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <!--Seguranca-->
+                                            {% csrf_token %}
+                                            {{ form|bootstrap }}
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn btn-success">Enviar Mensagem</button>
+                                    </div>
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+        <section class="contato-carro" id="contato" >
+            <div class="container">
+                <div class="contatos row justify-content-center" style="background-color: #fff;">
+                    <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="border-right contact-info-item">
+                            <i class="bi bi-telephone"></i>
+                            <h4>Número de telefone</h4>
+                            <p>(99) 9 9999 9999</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="border-right contact-info-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <h4>Localização</h4>
+                            <p>1914 translation by H. Rackham.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 col-xl-4">
+                        <div class="contact-info-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <h4>Endereço de Email</h4>
+                            <p>help@lipsum.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fim Carro -->
+        {% endblock main %} 
+        <!-- Inicio Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row  justify-content-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-col">
+                            <h3>Sobre nós</h3>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            </p>
+                            <br>
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 col-md-4">
+                        <div class="footer-col">
+                            <h3>Links rápidos</h3>
+                            <ul>
+                                <li><a href="#myCarousel">Home</a></li>
+                                <li><a href="#destaques">Destaques</a></li>
+                                <li><a href="#seminovos">Seminovos</a></li>
+                                <li><a href="#sobreNos">Sobre nós</a></li>
+                                <li><a href="#clientes">Clientes</a></li>
+                                <li><a href="#contato">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-col">
+                            <h3>Contatos</h3>
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="bi bi-envelope"></i>
+                                        help@lipsum.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="bi bi-telephone"></i>
+                                        99 9999 9999
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        1914 translation by H. Rackham.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> 
+                                        <i class="bi bi-instagram"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> 
+                                        <i class="bi bi-facebook"></i>
+                                        Facebook
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <p class="copyright">&copy; Padrão Agência Digital - 2022 Todos os diteitos reservados</p>
+                    </div>
+                    <div  class="col-lg-6 col-md-6">
+                        <p class="copyright">Criado por: <a href="https://www.padraoagenciadigital.com.br/"> <b>Padrão Agência Digital</b></a></p>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        <!-- Fim Footer -->
+        <div class="button-whasapp">
+            <a type="button" href="https://api.whatsapp.com/send?phone=5548912345678&text=Olá!%20Encontrei%20seu%20site%20na%20Internet%20e%20preciso%20de%20seus%20serviços." class="float" target="_blank" onclick="goog_report_conversion('https://api.whatsapp.com/send?phone=554899999999&text=Olá!%20Entrei%20em%20seu%20site%20e%20preciso%20de%20seus%20serviços.')">
+                <i class="bi bi-whatsapp" ></i>
+            </a>
+        </div>        
+        
+        <!-- Jquery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- popper -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!-- bootstrap -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Main -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <!-- owl carousel js -->
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/d8695f59a3.js" crossorigin="anonymous"></script>
+        <!-- magnific-popup -->
+        <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+        
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 400,
+                duration: 1000,
+            });
+        </script>
+    </body>
+</html>
