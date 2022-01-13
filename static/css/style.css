@@ -84,19 +84,27 @@ ul {
 --------------------------------------------------------------*/
 .topbar {
   background-color: var(--bg-dark);
+  padding-top: 10px;
 }
 .topbar img {
-  padding-top: 12px;
   padding-bottom: 10px;
   width: 50px;
 }
-.topbar .topbar-item {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  text-align: center;
+.topbar button {
+  padding-left: 10px;
 }
-.topbar .btn-warning {
+.topbar .topbar-item {
+  padding-top: 10px;
+}
+
+.topbar .btn {
   color: var(--block-000);
+}
+.topbar .btn-secondary {
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
 }
 /*--------------------------------------------------------------
 # Nav
@@ -714,7 +722,7 @@ ul {
 /*--------------------------------------------------------------
 # Responsividade
 --------------------------------------------------------------*/
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .navbar-toggler {
     background-color: var(--dark-to-main-color);
     box-shadow: var(--shadow-black-300);
@@ -745,7 +753,7 @@ ul {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .carousel-item {
     height: 20rem;
   }
@@ -762,50 +770,24 @@ ul {
   .section-title h2 {
     font-size: 35px;
   }
-  .topbar .topbar-item {
-    padding-top: 1px;
-  }
-  .topbar .btn-warning i {
+  .topbar .btn i {
     color: var(--block-000);
   }
-  .topbar .btn-warning {
-    color: transparent;
-    display: block;
-    width: 50px;
-    height: 50px;
-    line-height: 30px;
-    border: 2px solid var(--color-2);
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    background: var(--color-2);
-    /* box-shadow: 0 0 3px gray; */
-    font-size: 20px;
-    font-weight: bold;
+
+  .topbar .btn:hover {
+    color: transparent !important;
   }
-  .topbar .btn-success i {
-    color: var(--block-000);
-  }
-  .topbar .btn-success:hover {
+  .topbar .btn {
+    margin: 5px;
+    /* background-color: black; */
     color: transparent;
-  }
-  .topbar .btn-success {
-    color: transparent;
-    display: block;
-    width: 50px;
-    height: 50px;
-    line-height: 30px;
-    border: 2px solid var(--color-3);
-    border-radius: 50%;
-    text-align: center;
-    text-decoration: none;
-    background: var(--color-3);
-    /* box-shadow: 0 0 3px gray; */
-    font-size: 20px;
-    font-weight: bold;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .section-padding {
     padding: 80px 0;
   }
@@ -825,7 +807,7 @@ ul {
   .section-title h2 {
     font-size: 30px;
   }
-  .topbar .btn-warning {
+  /* .topbar .btn-warning {
     right: 15px;
     bottom: 25px;
     font-size: 16px;
@@ -834,7 +816,7 @@ ul {
     right: 15px;
     bottom: 25px;
     font-size: 16px;
-  }
+  } */
 }
 @media (max-width: 450px) {
   .carousel-caption {
@@ -845,16 +827,6 @@ ul {
   }
   .carousel-inner img {
     min-height: 14rem;
-  }
-  .topbar .btn-warning {
-    right: 10px;
-    bottom: 20px;
-    font-size: 13px;
-  }
-  .topbar .btn-success {
-    right: 10px;
-    bottom: 20px;
-    font-size: 13px;
   }
   .button-whasapp i {
     width: 45px;
@@ -874,24 +846,13 @@ ul {
   .carousel-inner img {
     min-height: 10rem;
   }
-  .home-text h1 {
-    font-size: 24px;
-    /* margin: 0 0 40px; */
+  .topbar .btn {
+    margin: 5px;
+    /* background-color: black; */
+    color: transparent;
+    padding: 2px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50px;
   }
-  .home-text p {
-    font-size: 16px;
-  }
-  .home-btn {
-    padding-top: 10px;
-  }
-  /* .topbar .btn-warning {
-    right: 8px;
-    bottom: 10px;
-    font-size: 5px;
-  }
-  .topbar .btn-success {
-    right: 8px;
-    bottom: 10px;
-    font-size: 5px;
-  } */
 }
