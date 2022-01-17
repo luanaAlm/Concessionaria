@@ -61,23 +61,9 @@
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active btn-efect" aria-current="page" href="#myCarousel">Home</a>
+                            <a class="nav-link active btn-efect" aria-current="page" href="{% url 'index' %}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active btn-efect" aria-current="page" href="#destaques">Destaques</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active btn-efect" aria-current="page" href="#seminovos">Seminovos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active btn-efect" aria-current="page" href="#sobreNos">Sobre nós</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active btn-efect" aria-current="page" href="#clientes">Clientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class=" nav-link active btn-efect" aria-current="page" href="#contato">Contato</a>
-                        </li>
+                        
                     </ul>
                 </div>
                 </div>
@@ -171,6 +157,24 @@
                 </div>
             </div>        
         </section>
+        <!-- <div class="div_possivel_interesse">
+            <h3 class="titulo_especificacao">Talvez você se interesse por</h3>
+            <div class="row">
+                {% for sugestao in sugestoes %}
+                    <div class="col-md cont">
+                        <div class="card_imovel">
+                            <img class="img_capa_imovel" src="{{sugestao.imagens.all.0.img.url}}">
+                            <div class="informacoes_imoveis">
+                            <a class="a_none" href="{% url 'carro' sugestao.id %}"><h4 class="valor">R$ {{sugestao.valor}}</h4></a>
+                            <p>{{sugestao.rua}}, {{sugestao.marca}}</p>
+                            <br>
+                            <img width="7%" src="{% static 'plataforma/img/heart.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div> -->
         <section class="contato-carro" id="contato" >
             <div class="container">
                 <div class="contatos row justify-content-center" style="background-color: #fff;">

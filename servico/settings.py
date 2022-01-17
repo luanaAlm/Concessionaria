@@ -1,5 +1,7 @@
 import os
 from decouple import config
+import django_heroku
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -95,3 +97,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/img_produtos')
+
+# heroku
+django_heroku.settings(locals())

@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from .models import *
 from core.form import CarroForm, ClienteForm
+from django.shortcuts import get_object_or_404
 
 
 def index(request):
@@ -9,8 +10,25 @@ def index(request):
     destaques = Carros.objects.filter(categoria="Destaques")
     seminovos = Carros.objects.filter(categoria="Seminovos")
     depoimentos = Depoimento.objects.all()
-
     form = ClienteForm()
+    # filtro
+    # preco_minimo = request.GET.get('preco_minimo')
+    # preco_maximo = request.GET.get('preco_maximo')
+    # combustivel = request.GET.get('cidade')
+    # cor = request.GET.getlist('tipo')
+    # if preco_minimo or preco_maximo or cor or combustivel:
+
+    #     if not preco_minimo:
+    #         preco_minimo = 0
+    #     if not preco_maximo:
+    #         preco_maximo = 999999999
+    #     if not combustivel:
+    #         combustivel = ['A', 'C']
+
+    #     carros = Carros.objects.filter(valor__gte=preco_minimo)\
+    #         .filter(valor__lte=preco_maximo)
+    # else:
+    #     carros = Carros.objects.all()
 
     return render(request, 'index.html', {
         "bannerPrincipal": bannerPrincipal,
@@ -18,7 +36,7 @@ def index(request):
         "destaques": destaques,
         "seminovos": seminovos,
         "depoimentos": depoimentos,
-        "form": form
+        "form": form,
     })
 
 
@@ -29,18 +47,19 @@ def viewCarros(request, ID_Carro):
     form = ClienteForm()
     data["carros"] = carros
     data["form"] = form
-    return render(request, "carro.html", data, {"form": form, })
+    # Sugestoes
+    # carros = get_object_or_404(Carros, id=id)
+    # sugestoes = Carros.objects.filter(marca=Carros.marca).exclude(id=id)[:2]
+
+    # return render(request, 'carro.html', data, {"form": form, 'carros': carros, 'sugestoes': sugestoes, 'id': id})
 
 
 def cliente_novo(request):
     form = ClienteForm(request.POST or None)
     if form.is_valid():
         form.save()
-        # messages.success(request, 'Sua mensagem foi enviada com sucesso!')
         return redirect('index')
     else:
-        # messages.error(
-        #     request, 'Houve um erro, reenvie novamente a mensagem!')
         return redirect('index')
 
 
@@ -48,7 +67,6 @@ def cliente_novo_carro(request):
     form = ClienteForm(request.POST or None)
     if form.is_valid():
         form.save()
-        # messages.success(request, 'Sua mensagem foi enviada com sucesso!')
         return redirect('carro')
     else:
         # messages.error(
