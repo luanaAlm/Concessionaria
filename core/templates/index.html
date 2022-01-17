@@ -56,22 +56,22 @@
             </div>
             <div class="col-8 owl-carousel destaques-carousel">
                 {% for i in destaques %}
-                <div class="destaque-item" data-aos="fade-up">
-                    <div class="card box-shadow">
-                        <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
-                        <div class="card-body">
-                            <h3>{{i.marca}} {{i.Modelo}}</h3>
-                            <h3>Ano {{i.AnoInicial}}/{{i.AnoFinal}}</h3>
-                            <h4>RS {{i.valor}}</h4>
-                            <div class="align-items-center">
-                                <a class="btn btn-lg btn-block" href="{% url 'viewCarros' i.ID_Carro %}">
-                                    <i class="bi bi-arrow-right-short"></i>
-                                    Saiba Mais
-                                </a>
+                    <div class="destaque-item" data-aos="fade-up">
+                        <div class="card box-shadow">
+                            <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
+                            <div class="card-body">
+                                <h3>{{i.marca}} {{i.Modelo}}</h3>
+                                <h3>Ano {{i.AnoInicial}}/{{i.AnoFinal}}</h3>
+                                <h4>RS {{i.valor}}</h4>
+                                <div class="align-items-center">
+                                    <a class="btn btn-lg btn-block" href="{% url 'viewCarros' i.ID_Carro %}">
+                                        <i class="bi bi-arrow-right-short"></i>
+                                        Saiba Mais
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 {% endfor %}
             </div>
         </div>

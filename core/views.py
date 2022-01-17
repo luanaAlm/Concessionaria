@@ -41,14 +41,12 @@ def index(request):
 
 
 def viewCarros(request, ID_Carro):
-    data = {}
-    carros = Carros.objects.get(ID_Carro=ID_Carro)
-    form = CarroForm(request.POST or None, instance=carros)
     form = ClienteForm()
-    data["carros"] = carros
-    data["form"] = form
+    carros = get_object_or_404(Carros, ID_Carro=ID_Carro)
+    sugestoes = Carros.objects.filter(
+        marca=carros.marca).exclude(ID_Carro=ID_Carro)[:2]
 
-    return render(request, "carro.html", data, {"form": form, })
+    return render(request, "carro.html", {"form": form, "carros": carros, "sugestoes": sugestoes, 'ID_Carro': ID_Carro})
 
 
 def cliente_novo(request):

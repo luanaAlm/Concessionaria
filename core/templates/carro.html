@@ -157,25 +157,41 @@
                 </div>
             </div>        
         </section>
-        <!-- <div class="div_possivel_interesse">
-            <h3 class="titulo_especificacao">Talvez você se interesse por</h3>
-            <div class="row">
-                {% for sugestao in sugestoes %}
-                    <div class="col-md cont">
-                        <div class="card_imovel">
-                            <img class="img_capa_imovel" src="{{sugestao.imagens.all.0.img.url}}">
-                            <div class="informacoes_imoveis">
-                            <a class="a_none" href="{% url 'carro' sugestao.id %}"><h4 class="valor">R$ {{sugestao.valor}}</h4></a>
-                            <p>{{sugestao.rua}}, {{sugestao.marca}}</p>
-                            <br>
-                            <img width="7%" src="{% static 'plataforma/img/heart.png' %}">
-                            </div>
+        <!-- Fim Carro -->
+        <!-- Inicio Sugestao -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="carro-title">
+                            <h2>Talvez você se interesse por</h2>
                         </div>
                     </div>
-                {% endfor %}
+                
+                    <div class="col-10 owl-carousel sugestao-carousel">
+                        {% for i in sugestoes %}
+                        <div class="destaque-item" data-aos="fade-up">
+                            <div class="card box-shadow">
+                                <img class="card-img-top" src="{{i.imagem1}}" loading="lazy" alt="{{i.title}}">
+                                <div class="card-body">
+                                    <h3>{{i.marca}} {{i.Modelo}}</h3>
+                                    <h3>Ano {{i.AnoInicial}}/{{i.AnoFinal}}</h3>
+                                    <h4>RS {{i.valor}}</h4>
+                                    <div class="align-items-center">
+                                        <a class="btn btn-lg btn-block" href="{% url 'viewCarros' i.ID_Carro %}">
+                                            <i class="bi bi-arrow-right-short"></i>
+                                            Saiba Mais
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
-        </div> -->
-        <section class="contato-carro" id="contato" >
+        <!-- Fim Sugestao -->
+        <!-- Inicio Contato -->
+        <section class="contato-carro section-padding" id="contato" >
             <div class="container">
                 <div class="contatos row justify-content-center" style="background-color: #fff;">
                     <div class="col-12 col-md-4 col-lg-4 col-xl-4">
@@ -202,7 +218,7 @@
                 </div>
             </div>
         </section>
-        <!-- Fim Carro -->
+        <!-- Fim Contato -->
         {% endblock main %} 
         <!-- Inicio Footer -->
         <footer class="footer">
