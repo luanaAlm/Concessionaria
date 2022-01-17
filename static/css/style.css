@@ -752,6 +752,22 @@ ul {
   .footer-col {
     margin-bottom: 30px;
   }
+  .topbar .btn i {
+    color: var(--block-000);
+  }
+
+  .topbar .btn:hover {
+    color: transparent !important;
+  }
+  .topbar .btn {
+    margin: 5px;
+    /* background-color: black; */
+    color: transparent;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+  }
 }
 @media (max-width: 768px) {
   .carousel-item {
