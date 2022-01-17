@@ -8,7 +8,7 @@ def index(request):
     bannerPrincipal = Banner1.objects.all()
     bannersSecundarios = Banner2.objects.all()
     destaques = Carros.objects.filter(categoria="Destaques")
-    seminovos = Carros.objects.filter(categoria="Seminovos")
+    seminovos = Carros.objects.all()
     depoimentos = Depoimento.objects.all()
     form = ClienteForm()
     # filtro
