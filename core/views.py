@@ -47,11 +47,8 @@ def viewCarros(request, ID_Carro):
     form = ClienteForm()
     data["carros"] = carros
     data["form"] = form
-    # Sugestoes
-    # carros = get_object_or_404(Carros, id=id)
-    # sugestoes = Carros.objects.filter(marca=Carros.marca).exclude(id=id)[:2]
 
-    # return render(request, 'carro.html', data, {"form": form, 'carros': carros, 'sugestoes': sugestoes, 'id': id})
+    return render(request, "carro.html", data, {"form": form, })
 
 
 def cliente_novo(request):

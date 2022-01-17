@@ -9,7 +9,8 @@ SECRET_KEY = '813vwsa-ajk7#in3i&m+jvjh7a8ewe+uk3oub4389*0%@q2bg^'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/',
+                 'https://concessionaria-app.herokuapp.com/']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
