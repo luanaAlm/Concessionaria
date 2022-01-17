@@ -29,7 +29,7 @@
                     <div class="row">
                         <div class="col-4 col-sm-6 col-md-7 col-lg-7 col-xl-8">
                             <a class="navbar-brand img-fluid" href="{% url 'index' %}">
-                                <img src="{% static 'image/logo.png' %}" alt="logomarca" loading="lazy">
+                                <img src="{% static 'image/Logo.png' %}" alt="logomarca" loading="lazy">
                             </a>
                         </div>
                         <div class="col-8 col-sm-6 col-md-5 col-lg-5 col-xl-4 topbar-item" >
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-8">
+                    <div class="col-lg-8 col-md-7">
                         <div class="owl-carousel carros-carousel parent-container">
                             <a class="image-link" href="{{carros.imagem1}}">
                                 <img src="{{carros.imagem1}}" class="img-fluid" alt="{{ carros.marca }}" loading="lazy">
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     
-                    <div class="carro-item col-lg-4 col-md-4">
+                    <div class="carro-item col-lg-4 col-md-5">
                         <div class="contact-form">
                             <form action="{% url 'cliente_novo_carro' %}" method="POST">
                                 <div class="row">
