@@ -5,9 +5,9 @@ import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '813vwsa-ajk7#in3i&m+jvjh7a8ewe+uk3oub4389*0%@q2bg^'
 
-DEBUG = config('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -55,10 +55,10 @@ WSGI_APPLICATION = 'servico.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": config('NAME'),
-        "USER": config('USER'),
-        "PASSWORD": config('PASSWORD'),
-        "HOST": config('HOST'),
+        "NAME": "DEMO_CARROS",
+        "USER": "postgres",
+        "PASSWORD": "root",
+        "HOST": "localhost",
         "PORT": "5432",
     }
 }
