@@ -12,7 +12,19 @@ class CarroAdmin(admin.ModelAdmin):
                    'AnoFinal', 'porta', 'combustivel', 'finalPlaca', 'cor', 'valor',)
 
 
-admin.site.register(Cliente)
+@admin.register(Depoimento)
+class DepoimentoAdmin(admin.ModelAdmin):
+    list_display = ('ID_Depoimentos', 'nome')
+    search_fields = ('ID_Depoimentos', 'nome',)
+    list_filter = ('nome',)
+
+
+@admin.register(Cliente)
+class ClienteAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email', 'telefone', 'mensagem')
+    search_fields = ('nome', 'email', 'telefone', 'mensagem',)
+    list_filter = ('nome', 'email', 'telefone', 'mensagem',)
+
+
 admin.site.register(Banner1)
 admin.site.register(Banner2)
-admin.site.register(Depoimento)
