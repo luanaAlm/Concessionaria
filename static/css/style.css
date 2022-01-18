@@ -183,9 +183,7 @@ ul {
   opacity: 0.7;
   position: absolute;
 }
-.card-img-top img {
-  object-fit: cover !important;
-}
+
 /*-------------------------------------------------- */
 /* Destaques
 -------------------------------------------------- */
@@ -198,7 +196,7 @@ ul {
   box-shadow: var(--shadow-black-100);
   border-width: 15px;
 }
-.card img {
+.card-img-top img {
   object-fit: cover !important;
 }
 .card-body {
