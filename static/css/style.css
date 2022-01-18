@@ -184,7 +184,7 @@ ul {
   position: absolute;
 }
 .card-img-top img {
-  object-fit: cover;
+  object-fit: cover !important;
 }
 /*-------------------------------------------------- */
 /* Destaques
