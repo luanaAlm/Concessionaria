@@ -197,7 +197,7 @@ ul {
   border-width: 15px;
 }
 .card-img-top img {
-  object-fit: cover !important;
+  object-fit: contain !important;
 }
 .card-body {
   align-items: center;
