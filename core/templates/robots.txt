@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /private/
+Disallow: /junk/
+Disallow: /admin/
+Sitemap: http://127.0.0.1:8000/sitemap.xml
